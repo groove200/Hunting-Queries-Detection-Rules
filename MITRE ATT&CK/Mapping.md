@@ -1,5 +1,7 @@
 # MITRE ATT&CK Mapping
 
+[![MITRE ATT&CK v19](https://img.shields.io/badge/MITRE%20ATT%26CK-v19-red)](https://attack.mitre.org/)
+
 This page includes the mapping of KQL queries to the [MITRE ATT&CK](https://attack.mitre.org/) framework. The framework is a knowledge base of adversary tactics and techniques based on real-world observations.
 
 This section only includes references to queries that can be mapped in the MITRE ATT&CK Framework. Reconnaissance and Resource Development are out of scope. 
@@ -11,7 +13,8 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 10 |
 | Persistence | 13 |
 | Privilege Escalation | 7 |
-| Defense Evasion | 30 |
+| Stealth | 20 |
+| Defense Impairment | 9 |
 | Credential Access | 7 |
 | Discovery | 23 |
 | Lateral Movement | 2 |
@@ -84,7 +87,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
 | T1548.003 | Abuse Elevation Control Mechanism: Sudo and Sudo Caching|[Users Added To Sudoers Group](../Defender%20For%20Endpoint/Linux/Linux%20-%20UsersAddedToSudoersGroup.md)|
 
-## Defense Evasion
+## Stealth
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
@@ -105,8 +108,12 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1218 | System Binary Proxy Execution | [New LOL Bin External Connection](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/NewLOLBinExternalConnection.md) |
 | T1218 | System Binary Proxy Execution | [Certutil Remote Download](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/CertutilRemoteDownload.md) |
 | T1218 | System Binary Proxy Execution | [LOLBin Remote IP CommandLine](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/LOLBinRemoteIPCommandLine.md) |
-| T1218.005| System Binary Proxy Execution: Mshta | [mshta executions](../Defender%20For%20Endpoint/MshtaExecutions.md) |
+| T1218.005| System Binary Proxy Execution: Mshta | [MSHTA executions](../Defender%20For%20Endpoint/MshtaExecutions.md) |
+| T1218.005 | System Binary Proxy Execution: Mshta | [Outbound MSHTA](../Defender%20For%20Endpoint/OutboundMSHTA.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
+
+
+## Defense Impairment
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562 | Impair Defenses | [Alert Supression Added](../Defender%20XDR/AlertSupressionAdded.md) |
 | T1562.001 | Impair Defenses: Disable or Modify Tool | [XDR Advanced Feature Disabled](../Defender%20XDR/AdvancedFeatureDisabled.md)|
